@@ -1,0 +1,103 @@
+Name                  Value           Class        Type         Size             Line  Section
+
+_DYNAMIC            |0000000000003dc8|   d  |            OBJECT|                |     |.dynamic
+# _DYNAMIC is an object that holds information used by the dynamic linker. It's stored in the .dynamic section.
+
+_GLOBAL_OFFSET_TABLE_|0000000000003fb8|   d  |            OBJECT|                |     |.got
+# _GLOBAL_OFFSET_TABLE_ is used for position-independent code, especially in dynamic linking. It's located in the .got (Global Offset Table) section.
+
+_IO_stdin_used      |0000000000002000|   R  |            OBJECT|0000000000000004|     |.rodata
+# _IO_stdin_used is a symbol related to standard input, likely used by the runtime for I/O operations. It is read-only and located in the .rodata section.
+
+_ITM_deregisterTMCloneTable|                |   w  |            NOTYPE|                |     |*UND*
+# _ITM_deregisterTMCloneTable is a weak, undefined symbol related to transactional memory. It's not defined in this file and would be resolved during linking.
+
+_ITM_registerTMCloneTable|                |   w  |            NOTYPE|                |     |*UND*
+# _ITM_registerTMCloneTable is another weak, undefined symbol related to transactional memory, similar to the previous one.
+
+__FRAME_END__       |00000000000020e0|   r  |            OBJECT|                |     |.eh_frame
+# __FRAME_END__ marks the end of the frame information for exception handling. It's read-only and located in the .eh_frame section.
+
+__GNU_EH_FRAME_HDR  |0000000000002004|   r  |            NOTYPE|                |     |.eh_frame_hdr
+# __GNU_EH_FRAME_HDR is a header for the .eh_frame section, used for exception handling by the GNU compiler.
+
+__TMC_END__         |0000000000004020|   D  |            OBJECT|                |     |.data
+# __TMC_END__ is an object, likely marking the end of some initialized data related to thread-local storage or transactional memory. It's located in the .data section.
+
+__abi_tag           |000000000000038c|   r  |            OBJECT|0000000000000020|     |.note.ABI-tag
+# __abi_tag is an object containing ABI (Application Binary Interface) information, often used to ensure compatibility between binaries. It's located in the .note.ABI-tag section.
+
+__bss_start         |0000000000004020|   B  |            NOTYPE|                |     |.bss
+# __bss_start marks the beginning of the .bss section, which contains uninitialized global and static variables.
+
+__cxa_finalize@GLIBC_2.2.5|                |   w  |              FUNC|                |     |*UND*
+# __cxa_finalize is a weak, undefined function, typically used by the C++ runtime to run cleanup functions when a program exits.
+
+__data_start        |0000000000004000|   D  |            NOTYPE|                |     |.data
+# __data_start marks the beginning of the .data section, which contains initialized global and static variables.
+
+__do_global_dtors_aux|0000000000001100|   t  |              FUNC|                |     |.text
+# __do_global_dtors_aux is a local function (not globally accessible) that is likely involved in running destructors for global objects. It's located in the .text (code) section.
+
+__do_global_dtors_aux_fini_array_entry|0000000000003dc0|   d  |            OBJECT|                |     |.fini_array
+# __do_global_dtors_aux_fini_array_entry is an entry in the .fini_array, which is used to store pointers to functions that are called when the program exits.
+
+__dso_handle        |0000000000004008|   D  |            OBJECT|                |     |.data
+# __dso_handle is an object used by the dynamic linker to manage shared libraries. It's located in the .data section.
+
+__frame_dummy_init_array_entry|0000000000003db8|   d  |            OBJECT|                |     |.init_array
+# __frame_dummy_init_array_entry is an entry in the .init_array, which stores pointers to functions that are called before `main()`.
+
+__gmon_start__      |                |   w  |            NOTYPE|                |     |*UND*
+# __gmon_start__ is a weak, undefined symbol that is related to GNU's gprof profiling. It will be resolved during linking.
+
+__libc_start_main@GLIBC_2.34|                |   U  |              FUNC|                |     |*UND*
+# __libc_start_main is an undefined function that serves as the entry point for a program, called by the C runtime. It will be linked from the C library (glibc).
+
+_edata              |0000000000004020|   D  |            NOTYPE|                |     |.data
+# _edata marks the end of the initialized data section (.data).
+
+_end                |0000000000004070|   B  |            NOTYPE|                |     |.bss
+# _end marks the end of the .bss section, and therefore the end of all global and static variables.
+
+_fini               |0000000000001194|   T  |              FUNC|                |     |.fini
+# _fini is a function that is called when a program terminates. It's located in the .fini section, which is dedicated to finalization functions.
+
+_init               |0000000000001000|   T  |              FUNC|                |     |.init
+# _init is a function that is called before `main()` when a program starts. It's located in the .init section, which is dedicated to initialization functions.
+
+_start              |0000000000001060|   T  |              FUNC|0000000000000026|     |.text
+# _start is the entry point of the program before control is handed over to `main()`. It's located in the .text (code) section.
+
+completed.0         |0000000000004020|   b  |            OBJECT|0000000000000001|     |.bss
+# completed.0 is a local variable in the .bss section, likely used internally by the runtime. It's uninitialized and takes up 1 byte.
+
+data_start          |0000000000004000|   W  |            NOTYPE|                |     |.data
+# data_start is a weak symbol marking the beginning of the .data section. It's similar to __data_start but may be overridden.
+
+deregister_tm_clones|0000000000001090|   t  |              FUNC|                |     |.text
+# deregister_tm_clones is a local function involved in transactional memory management, located in the .text section.
+
+frame_dummy         |0000000000001140|   t  |              FUNC|                |     |.text
+# frame_dummy is a local function used to initialize frame-related information for exception handling, located in the .text section.
+
+main                |0000000000001149|   T  |              FUNC|000000000000004b|     |.text
+# main is the main function of the program, located in the .text section. It has a size of 75 bytes.
+
+malloc@GLIBC_2.2.5  |                |   U  |              FUNC|                |     |*UND*
+# malloc is an undefined function that will be linked from the C library (glibc). It's used for dynamic memory allocation.
+
+mango               |0000000000004010|   D  |            OBJECT|0000000000000004|     |.data
+# mango is a global variable in the .data section, initialized and taking up 4 bytes.
+
+melon               |0000000000004018|   d  |            OBJECT|0000000000000008|     |.data
+# melon is a global (static) variable in the .data section, initialized and taking up 8 bytes.
+
+peach               |0000000000004068|   b  |            OBJECT|0000000000000008|     |.bss
+# peach is a global variable in the .bss section, uninitialized and taking up 8 bytes.
+
+pear                |0000000000004040|   B  |            OBJECT|0000000000000028|     |.bss
+# pear is another global variable in the .bss section, uninitialized and taking up 40 bytes.
+
+register_tm_clones  |00000000000010c0|   t  |              FUNC|                |     |.text
+# register_tm_clones is a local function involved in transactional memory management, located in the .text section.
