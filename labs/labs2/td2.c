@@ -46,15 +46,27 @@ int main(int argc, char *argv[]) {
 
   //ex4
   int a;
-  printf("Enter a multiple of 10 : \n");
-  scanf("%d",&a);
+  printf("Enter a multiple of 10 : ");
+  scanf("%d", &a);
+  if (a % 10 == 0) {
+    printf("%d is a multiple of 10.\n", a);
+  } else {
+    printf("%d is not a multiple of 10. Please re-enter a number :\n", a);
+    scanf("%d", &a);
+  }
+
+  //ex5
+  int b;
+  printf("Enter a multiple of 10 : ");
+  scanf("%d",&b);
   int isDivisibleByTen = 1;
   while (isDivisibleByTen) {
-    if (a % 10 == 0) {
+    if (b % 10 == 0) {
       isDivisibleByTen = 0;
+      printf("%d is a multiple of ten.\n", b);
     } else {
-      printf("Error, this isn't a multiple of 10, please re-enter an int : \n");
-      scanf("%d", &a);
+      printf("Error, this isn't a multiple of 10, please re-enter an int : ");
+      scanf("%d", &b);
     }
   }
 
