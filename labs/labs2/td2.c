@@ -34,6 +34,15 @@ int main(int argc, char *argv[]) {
   //If the user enter a negative number in exercise 2 the output of the function is always 0
   //since k is < 0, we don't enter the for because i is equals to 1 it is > than a negative number
   //hence the result is the initialisation of sum wich is 0
+  printf("\n");
+  int l;
+  do {
+    printf("Select an int l > 0 to do the sum of the square from 1 to l : ");
+    scanf("%d", &l);
+  } while (l < 0);
+  printf("\n");
+  printf("The sum of squares from 1 to %d is : %d \n", l, ex2(l));
+
   
 	return EXIT_SUCCESS;
 }
