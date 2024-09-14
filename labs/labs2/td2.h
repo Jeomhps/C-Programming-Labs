@@ -2,7 +2,6 @@
 #define TD2_H
 
 // Déclaration des fonction
-int ex1();
-int ex2(int k);
+int part_ent(double number);
 
 #endif
