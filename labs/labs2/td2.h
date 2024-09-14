@@ -8,5 +8,6 @@ int choix(int value);
 void toto(int z);
 void titi(int *iptr);
 int puissance_inf_epsilon(void);
+int sum_of_squares(int n);
 
 #endif

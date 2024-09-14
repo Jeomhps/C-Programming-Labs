@@ -36,6 +36,14 @@ void titi(int *iptr) {
   *iptr = 40;
 }
 
+int sum_of_squares(int n){
+  if (n == 1) {
+    return 1;
+  } else {
+    return n * n + sum_of_squares(n - 1); //n * n is for the current n and then I call it on n-1 until n reach 1 which is the "base case"
+  }
+}
+
 //If there is no void in parameters, it creates a warning when compiling. 
 /*This happens because the compiler assume that if there are no parameters it could take any number 
 of parameters, by providing void in parameters the compiler understand that it takes no parameters.*/
@@ -218,6 +226,9 @@ int main(int argc, char *argv[]) {
         break;
       case 11:
         printf("Executing Exercise 11\n");
+        NEWLINE;
+
+        printf("The sum of the squares from 1 to 200 is: %d\n", sum_of_squares(200));
         break;
       case 0:
         printf("Exiting the program. Goodbye!\n");
