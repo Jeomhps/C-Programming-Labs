@@ -1,10 +1,12 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <math.h>
 #include "td2.h"
 
 // This is a macro definition
 // Every time NEWLINE is encountered, the preprocessor will replace it with printf("\n")
 #define NEWLINE printf("\n")
+#define EPSILON 0.0001
 
 //part_ent function for exercise6
 int part_ent(double number){
@@ -32,6 +34,17 @@ void toto(int z){
 
 void titi(int *iptr) {
   *iptr = 40;
+}
+
+//If there is no void in parameters, it creates a warning when compiling. 
+/*This happens because the compiler assume that if there are no parameters it could take any number 
+of parameters, by providing void in parameters the compiler understand that it takes no parameters.*/
+int puissance_inf_epsilon(void) { 
+  int k = 0;
+  while (pow(10, -k) >= EPSILON) {
+    k++;
+  }
+  return k;
 }
 
 int main(int argc, char *argv[]) {
@@ -198,6 +211,10 @@ int main(int argc, char *argv[]) {
         break;
       case 10:
         printf("Executing Exercise 10\n");
+        NEWLINE;
+
+        printf("The smallest integer k such that 10^-k < EPSILON is %d\n", puissance_inf_epsilon());
+
         break;
       case 11:
         printf("Executing Exercise 11\n");
