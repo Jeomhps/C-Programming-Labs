@@ -12,7 +12,7 @@ int part_ent(double number){
 }
 
 double part_dec(double number) {
-  return number - (int)number;
+  return number - (int)number; //To grab the decimal part I just do a cast to take the integer part and substract it
 }
 
 int main(int argc, char *argv[]) {
