@@ -15,6 +15,16 @@ double part_dec(double number) {
   return number - (int)number; //To grab the decimal part I just do a cast to take the integer part and substract it
 }
 
+int choix(int value) {
+  if (value >= 1 && value <= 10) {
+    return 1;
+  } else if (value > 10 && value <= 20) {
+    return 2;
+  } else {
+    return 3;
+  }
+}
+
 int main(int argc, char *argv[]) {
   int choice;
 
@@ -148,6 +158,15 @@ int main(int argc, char *argv[]) {
       }
       case 8:
         printf("Executing Exercise 8\n");
+        NEWLINE;
+
+        int test = 7;
+        printf("If I pass the integer %d to the function, it returns %d\n", test, choix(test));
+        test = 13;
+        printf("If I pass the integer %d to the function, it returns %d\n", test, choix(test));
+        test = 100;
+        printf("If I pass the integer %d to the function, it returns %d\n", test, choix(test));
+
         break;
       case 9:
         printf("Executing Exercise 9\n");
