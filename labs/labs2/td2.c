@@ -25,6 +25,15 @@ int choix(int value) {
   }
 }
 
+void toto(int z){
+  z = 40;
+  printf("After modification z is equal to %d in the function toto\n", z);
+}
+
+void titi(int *iptr) {
+  *iptr = 40;
+}
+
 int main(int argc, char *argv[]) {
   int choice;
 
@@ -170,6 +179,22 @@ int main(int argc, char *argv[]) {
         break;
       case 9:
         printf("Executing Exercise 9\n");
+        NEWLINE;
+
+        int z = 10;
+        toto(z);
+        printf("In the main function z is equal to %d after the modifiction in the funciton toto\n", z);
+
+
+        /*
+         * To modify the value of an integer within a function, you need to pass a pointer to the integer 
+         * instead of passing the integer itself. By passing a pointer, you can modify the content of 
+         * the integer at the address the pointer points to.
+         */
+
+        titi(&z); //Here I'm passing the address of z in the function and titi will modify the int it points to
+        printf("After executing the fixed toto function titi, z is equal to %d in main\n", z);
+
         break;
       case 10:
         printf("Executing Exercise 10\n");

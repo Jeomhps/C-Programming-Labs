@@ -5,5 +5,7 @@
 int part_ent(double number);
 double part_dec(double number);
 int choix(int value);
+void toto(int z);
+void titi(int *iptr);
 
 #endif
