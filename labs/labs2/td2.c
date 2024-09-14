@@ -11,8 +11,8 @@ int part_ent(double number){
   return (int) number; //I do a cast on the double to transform it into an int
 }
 
-int part_dec(double number) {
-
+double part_dec(double number) {
+  return number - (int)number;
 }
 
 int main(int argc, char *argv[]) {
@@ -124,7 +124,7 @@ int main(int argc, char *argv[]) {
         }
         break;
       }
-      case 6:
+      case 6: {
         printf("Executing Exercise 6\n");
         NEWLINE;
 
@@ -134,10 +134,18 @@ int main(int argc, char *argv[]) {
         printf("The integer part of the double %f is %d\n",number ,part_ent(number));
 
         break;
-      case 7:
+      }
+      case 7: {
         printf("Executing Exercise 7\n");
         NEWLINE;
+
+        double number = 10.456;
+        printf("The decimal part of the double %f is %f\n",number ,part_dec(number));
+        number = 5.78;
+        printf("The decimal part of the double %f is %f\n",number ,part_dec(number));
+
         break;
+      }
       case 8:
         printf("Executing Exercise 8\n");
         break;
