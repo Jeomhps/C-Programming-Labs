@@ -11,6 +11,10 @@ int part_ent(double number){
   return (int) number; //I do a cast on the double to transform it into an int
 }
 
+int part_dec(double number) {
+
+}
+
 int main(int argc, char *argv[]) {
   int choice;
 
@@ -125,10 +129,14 @@ int main(int argc, char *argv[]) {
         NEWLINE;
 
         double number = 10.56;
-        printf("The integer part of the double %f is %d",number ,part_ent(number));
+        printf("The integer part of the double %f is %d\n",number ,part_ent(number));
+        number = 78;
+        printf("The integer part of the double %f is %d\n",number ,part_ent(number));
+
         break;
       case 7:
         printf("Executing Exercise 7\n");
+        NEWLINE;
         break;
       case 8:
         printf("Executing Exercise 8\n");
