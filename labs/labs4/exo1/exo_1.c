@@ -20,5 +20,10 @@ int main(int argc, char *argv[]) {
    * address the pointer points to. Let's patch this in exo2.
    */
 
+  /* To modify the value of an integer withit a function, you need to pass
+   * The integer to the function modify it's value, and return it in the
+   * function
+   */
+
   return EXIT_SUCCESS;
 }
